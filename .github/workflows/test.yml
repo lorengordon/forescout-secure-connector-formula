@@ -32,7 +32,7 @@ jobs:
       SALT_REPO_URL: https://repo.saltproject.io/py3/redhat/${{ matrix.el_version }}/x86_64/3004.repo
     steps:
       - name: Clone this git repository
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
 
       - run: curl -sSL -o /etc/yum.repos.d/salt.repo ${{ env.SALT_REPO_URL }}
       - run: >-
